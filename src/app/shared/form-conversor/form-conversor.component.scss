@@ -1,0 +1,47 @@
+.form-conversor {
+  margin: 40px 0;
+  display: block;
+  .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .result-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .input-container {
+    margin-bottom: -1.25em;
+  }
+  .mat-button-toggle-checked {
+    background-color: #F7F2FA;
+  }
+  .btn-submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 28px;
+  }
+
+
+  .example-right-align {
+    text-align: right;
+  }
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+}

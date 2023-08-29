@@ -1,0 +1,36 @@
+<app-card variant="secondary" class="form-conversor">
+  <form>
+    <h2>Selecione a moeda a ser convertida</h2>
+    <div class="flex-container">
+
+      <mat-form-field floatLabel="always">
+        <mat-label>Valor</mat-label>
+        <input matInput type="number" class="example-right-align" placeholder="0">
+        <span matTextPrefix>$&nbsp;</span>
+        <span matTextSuffix>.00</span>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Select</mat-label>
+        <mat-select>
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Select</mat-label>
+        <mat-select>
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="btn-submit">
+      <button mat-raised-button>Calcular Conversão</button>
+    </div>
+  </form>
+  <div class="result-box">
+    <h2>0,00 BRL</h2>
+    <p>* Última atualização: 29/08/2023 12:14 UTC-3</p>
+  </div>
+
+</app-card>

@@ -15,6 +15,13 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
+import { CardComponent } from './shared/card/card.component';
+import { FormConversorComponent } from './shared/form-conversor/form-conversor.component';
+import { CurrencyConverterComponent } from './pages/currency-converter/currency-converter.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -26,7 +33,10 @@ import { MatButtonModule } from '@angular/material/button';
     FooterComponent,
     BannerComponent,
     ContainerComponent,
-    HomeComponent
+    HomeComponent,
+    CardComponent,
+    FormConversorComponent,
+    CurrencyConverterComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +46,11 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonToggleModule,
     MatIconModule,
     MatChipsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
