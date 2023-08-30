@@ -23,8 +23,7 @@ import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-
-
+import { MessageComponent } from './shared/message/message.component';
 
 
 
@@ -38,7 +37,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     HomeComponent,
     CardComponent,
     FormConversorComponent,
-    CurrencyConverterComponent
+    CurrencyConverterComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
