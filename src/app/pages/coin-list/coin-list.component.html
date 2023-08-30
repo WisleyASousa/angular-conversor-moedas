@@ -1,7 +1,7 @@
 <app-container class="list-container">
-  <h2 class="text-center fs-3">Listagem de Moedas</h2>
+  <h2 class="text-center fs-3">Lista de Moedas</h2>
 
-  <div class="container-busca rounded-4">
+  <div class="container-busca rounded-4 shadow-sm">
 
     <mat-form-field appearance="fill" class="busca ">
       <mat-icon matPrefix>search</mat-icon>
@@ -25,7 +25,7 @@
     <p>Nenhuma moeda encontrada...</p>
   </div>
 
-  <table class="table mt-4 table-rounded" *ngIf="!loading && coinList.length !== 0">
+  <table class="table mt-4 table-rounded shadow" *ngIf="!loading && coinList.length !== 0">
     <thead>
       <tr>
         <th class="text-center thread-color fw-semibold text-dark">Símbolo

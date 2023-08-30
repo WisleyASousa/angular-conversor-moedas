@@ -30,6 +30,8 @@ import { CurrencyMaskModule } from "ng2-currency-mask";
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CoinListComponent } from './pages/coin-list/coin-list.component';
+import { HistoricComponent } from './pages/historic/historic.component';
+import { AlertComponent } from './shared/alert/alert.component';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { CoinListComponent } from './pages/coin-list/coin-list.component';
     FormConversorComponent,
     CurrencyConversionComponent,
     MessageComponent,
-    CoinListComponent
+    CoinListComponent,
+    HistoricComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,

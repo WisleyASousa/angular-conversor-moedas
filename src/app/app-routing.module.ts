@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { CurrencyConversionComponent } from './pages/currency-converter/currency-converter.component';
 import { CoinListComponent } from './pages/coin-list/coin-list.component';
+import { HistoricComponent } from './pages/historic/historic.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: "currency-converter",
     component: CurrencyConversionComponent
+  },
+  {
+    path: "historic",
+    component: HistoricComponent
   }
 ];
 

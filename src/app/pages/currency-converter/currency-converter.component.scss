@@ -4,7 +4,7 @@
   background: -moz-linear-gradient(left, #c2ceb9, #f0f5e9);
   background: -ms-linear-gradient(left, #c2ceb9, #f0f5e9);
   background: -o-linear-gradient(left, #c2ceb9, #f0f5e9);
-  background: linear-gradient(to right, #c2ceb9, #f0f5e9);
+  background: linear-gradient(to right, #c2ceb9, #ffffff);
   min-height: 100vh;
   min-width: 100%;
 
@@ -16,6 +16,7 @@
       padding: 20px 42px;
       width: 100%;
       background: linear-gradient(to right,#f0f5e9 , #c2ceb9);
+      text-align: justify;
 
   }
 
@@ -96,6 +97,9 @@
   }
   @media (min-width: 1024px) {
       .container-busca {
+          width: 70%;
+      }
+      .container-coins {
           width: 70%;
       }
   }

@@ -3,7 +3,7 @@
   <div class="container">
     <h2 class="text-center fs-3">Conversão de Moedas</h2>
     <form [formGroup]="formConverter" class="d-flex flex-column align-items-center justify-content-center" (ngSubmit)="submit()">
-      <div class="container-coins flex-lg-row flex-column rounded-4 my-4">
+      <div class="container-coins flex-lg-row flex-column shadow rounded-4 my-4">
 
         <mat-form-field appearance="fill">
           <mat-label class="text-dark">Moeda de origem</mat-label>
@@ -48,7 +48,7 @@
         </mat-form-field>
       </div>
 
-      <div class="container-value mx-4 rounded-4">
+      <div class="container-value shadow mx-4 rounded-4">
         <mat-form-field appearance="fill">
           <span matPrefix *ngIf="!this.formConverter.value.moedaOrigem" class="p-2 fw-bold">$</span>
           <span matTextPrefix title="{{ getDescricao(formConverter.get('moedaOrigem')?.value) }}"
@@ -68,7 +68,7 @@
 
 
       <div class="container-button">
-        <button type="submit" class="btn btn-success rounded-4" [disabled]="!formConverter.valid">CONVERTER</button>
+        <button type="submit" class="btn shadow btn-success rounded-4" [disabled]="!formConverter.valid">CONVERTER</button>
       </div>
     </form>
 
@@ -86,6 +86,14 @@
 
     <div *ngIf="msgError && !loading" class="error">
       <p>Ocorreu um erro inesperado, tente novamente!</p>
+    </div>
+
+    <div class="mt-5 shadow-sm container-coins rounded-4 mx-auto">
+      <p class="fs-4 fw-semibold mb-4">Como usar o conversor de moedas?</p>
+      <p>É bem simples: coloque o valor que deseja converter, selecione as moedas do país de origem e de destino e pronto, clique no Botão "Converter" você terá a conversão feita.
+
+      Vale destacar que o cálculo tem caráter apenas informativo e não substitui as disposições da norma cambial brasileira para casos específicos de conversão.
+      </p>
     </div>
 
   </div>
