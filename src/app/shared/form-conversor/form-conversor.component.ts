@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-form-conversor',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class FormConversorComponent {
 
+    constructor() { }
+
+    ngOnInit(): void {
+    }
+
+    converter(form: NgForm) {
+      if(form.valid) {
+        // this.
+        console.log(form);
+      } else {
+        alert("Formulário inválido!");
+      }
+      console.log(form.controls);
+    }
 }

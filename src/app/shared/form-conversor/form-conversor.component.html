@@ -1,11 +1,15 @@
 <app-card variant="secondary" class="form-conversor">
-  <form>
+
+  <form #f="ngForm" (ngSubmit)="converter(f)">
+
     <h2>Selecione a moeda a ser convertida</h2>
     <div class="flex-container">
 
+
       <mat-form-field floatLabel="always">
         <mat-label>Valor</mat-label>
-        <input matInput type="number" class="example-right-align" placeholder="0">
+
+        <input matInput type="number" name="valor" id="valor" ngModel required class="example-right-align" placeholder="0">
         <span matTextPrefix>$&nbsp;</span>
         <span matTextSuffix>.00</span>
       </mat-form-field>
@@ -24,10 +28,17 @@
         </mat-select>
       </mat-form-field>
     </div>
+    <div class="box-alert" *ngIf="(f.controls['valor']?.invalid && f.controls['valor']?.touched) || f.controls['valor']?.dirty">
+      <div class="alert d-flex justify-content-center align-items-center alert-danger" *ngIf="f.controls['valor']?.errors?.['required']" role="alert">
+        É obrigatório informar um valor maior que 0(zero)
+      </div>
+    </div>
     <div class="btn-submit">
       <button mat-raised-button>Calcular Conversão</button>
     </div>
+
   </form>
+
   <div class="result-box">
     <h2>0,00 BRL</h2>
     <p>* Última atualização: 29/08/2023 12:14 UTC-3</p>

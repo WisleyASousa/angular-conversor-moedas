@@ -7,6 +7,13 @@
     justify-content: center;
     gap: 12px;
     margin: 16px 0;
+    flex-wrap: wrap;
+  }
+  .box-alert {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .result-box {
     display: flex;
