@@ -1,0 +1,20 @@
+.app-footer {
+  background-color: black;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      padding: 0;
+      list-style: none;
+      &.socials {
+        li {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

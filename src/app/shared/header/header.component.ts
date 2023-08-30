@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare var $: any;
 
 @Component({
   selector: 'app-header',
@@ -7,13 +8,11 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  toggleNavbar() {
+    if ($('.navbar-toggler').is(':visible')) {
+      $('.navbar-collapse').collapse('hide');
+      $('.navbar-toggler').addClass('collapsed');
+    }
   }
-
-
-
-
 
 }

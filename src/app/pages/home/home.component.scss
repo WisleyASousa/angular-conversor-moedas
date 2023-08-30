@@ -1,7 +1,24 @@
 .homepage {
-  
+
   h2 {
     font-size: 32px;
   }
-}
+  .linkApi{
+    color: black;
+  }
+  .linkApi:hover {
+    color: #90c96f;
+  }
+    background: -webkit-linear-gradient(left, #c2ceb9, #f0f5e9);
+    background: -moz-linear-gradient(left, #c2ceb9, #f0f5e9);
+    background: -ms-linear-gradient(left, #c2ceb9, #f0f5e9);
+    background: -o-linear-gradient(left, #c2ceb9, #f0f5e9);
+    background: linear-gradient(to right, #c2ceb9, #f0f5e9);
+    min-height: 100vh;
+    min-width: 100%;
+  .box-home{
+    background: linear-gradient(to right,#f0f5e9 , #989c95);
 
+  }
+
+}

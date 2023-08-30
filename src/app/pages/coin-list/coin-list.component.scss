@@ -1,0 +1,70 @@
+app-container {
+  padding: 8rem 0 15rem 0;
+  background: -webkit-linear-gradient(left, #c2ceb9, #f0f5e9);
+  background: -moz-linear-gradient(left, #c2ceb9, #f0f5e9);
+  background: -ms-linear-gradient(left, #c2ceb9, #f0f5e9);
+  background: -o-linear-gradient(left, #c2ceb9, #f0f5e9);
+  background: linear-gradient(to right, #c2ceb9, #f0f5e9);
+  min-height: 100vh;
+  min-width: 100%;
+
+    label {
+    color: #fff;
+    padding: 10px;
+  }
+
+  .table-rounded {
+    overflow: hidden;
+  }
+
+  .thread-color {
+    background: linear-gradient(to right,#989c95 , #c2ceb9);
+  }
+
+  .container-busca {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    background: linear-gradient(to right,#989c95 , #c2ceb9);
+    padding: 20px;
+    padding-bottom: 0;
+  }
+
+  .container-busca ::ng-deep nav>ul {
+    margin-right: 10px;
+    padding: 0;
+    margin-left: 10px;
+    color: #fff;
+  }
+
+  .container-busca ::ng-deep .ngx-pagination .current {
+    background: white;
+    color: black;
+    font-weight: 700;
+    border-radius: 20px;
+
+  }
+
+  mat-icon {
+    cursor: pointer;
+    vertical-align: middle;
+  }
+
+  .busca {
+    margin: 0 auto;
+    width: 500px;
+  }
+
+  .itens {
+    margin: 0 auto;
+    width: 200px;
+  }
+
+  .fixed-width {
+    width: 200px;
+  }
+  @media (min-width: 1024px) {
+    padding: 8rem 7rem 15rem 7rem;
+  }
+}

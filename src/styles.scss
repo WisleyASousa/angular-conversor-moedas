@@ -1,4 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  }
+* {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  --mat-select-focused-arrow-color: #5c5c5c;
+  --mat-option-selected-state-label-text-color: #c3c4c3;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 20px;
+
+}
+
+::-webkit-scrollbar-track {
+  background-color: #7a7a7a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5c6160;
+  border-radius: 5px;
+}
+
+.navbar-nav .active {
+  background-color: #a1a5aa;
+  color: #fff;
+}
+
+mat-form-field {
+  margin: 8px;
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: #e0e0e0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.mdc-text-field--filled .mdc-line-ripple::after {
+  border-bottom-color: #545c54;
+}
+
+.mat-primary .mat-pseudo-checkbox-checked.mat-pseudo-checkbox-minimal::after {
+  color: #a5ada5;
+}

@@ -1,6 +1,6 @@
-<app-card variant="secondary" class="form-conversor">
+<!-- <app-card variant="secondary" class="form-conversor" >
 
-  <form #f="ngForm" (ngSubmit)="converter(f)">
+  <form #f="ngForm" (ngSubmit)="converter(f)" >
 
     <h2>Selecione a moeda a ser convertida</h2>
     <div class="flex-container">
@@ -17,37 +17,38 @@
       </div>
 
       <div class="d-md-flex gap-2">
-        <div class="">
-          <label for="exampleDataList" class="form-label">De</label>
-          <input class="form-control mb-4 mb-md-0" list="datalistOptions" id="exampleDataList"
-            placeholder="Pesquisar">
-          <datalist id="datalistOptions">
-            <option value="San Francisco">
-            <option value="New York">
-            <option value="Seattle">
-            <option value="Los Angeles">
-            <option value="Chicago">
-          </datalist>
-        </div>
-        <div class="">
-          <label for="exampleDataList" class="form-label">Para</label>
-          <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Pesquisar">
-          <datalist id="datalistOptions">
-            <option value="San Francisco">
-            <option value="New York">
-            <option value="Seattle">
-            <option value="Los Angeles">
-            <option value="Chicago">
-          </datalist>
-        </div>
+        <mat-form-field>
+          <label>De</label>
+          <input type="text" matInput placeholder="Selecione Moeda" formControlName="moeda1" ngModel required [matAutocomplete]="autoGroup1" name="moeda1" id="moeda1" >
+        <mat-autocomplete #autoGroup1="matAutocomplete">
+          <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+            <mat-option *ngFor="let name of group.names" [value]="name">
+              {{name}}
+            </mat-option>
+          </mat-optgroup>
+        </mat-autocomplete>
+      </mat-form-field>
+        <mat-form-field>
+          <label>Para</label>
+          <input type="text" matInput placeholder="Selecione Moeda" formControlName="moeda2" required [matAutocomplete]="autoGroup2" name="moeda2" id="moeda2">
+          <mat-autocomplete #autoGroup2="matAutocomplete">
+            <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+              <mat-option *ngFor="let name of group.names" [value]="name">
+                {{name}}
+              </mat-option>
+            </mat-optgroup>
+          </mat-autocomplete>
+        </mat-form-field>
 
       </div>
+
 
     </div>
     <div class="box-alert"
       *ngIf="(valor?.invalid && valor?.touched) || valor?.dirty">
       <app-message *ngIf="valor?.errors?.['required'] || (valor?.value <= 0)" mensagem="É obrigatório informar um valor maior que 0(zero)"></app-message>
     </div>
+
     <div class="btn-submit">
       <button mat-raised-button>Calcular Conversão</button>
     </div>
@@ -59,4 +60,4 @@
     <p>* Última atualização: 29/08/2023 12:14 UTC-3</p>
   </div>
 
-</app-card>
+</app-card> -->

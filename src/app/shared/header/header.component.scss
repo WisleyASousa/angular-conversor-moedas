@@ -6,6 +6,21 @@
     margin: 0 16px;
   }
 
+  .router-link-active {
+    color: rgb(144, 201, 111);
+  }
+
+  .navbar-toggler.collapsed>.close,
+  .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
+    display: none;
+  }
+
+  .mat-icon {
+    font-size: 24px;
+    margin-left: 5px;
+    color: #bcbcbc;
+  }
+
   .spacer {
     flex: 1 1 auto;
   }
@@ -23,3 +38,6 @@
   }
 }
 
+.router-link-active {
+  color: #90c96f;
+}
