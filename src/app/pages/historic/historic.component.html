@@ -33,13 +33,13 @@
               <td>{{ item.output }}
                 <button type="button " title="Valor é superior que 10000 dólares" class="btn d-flex mx-auto align-items-center justify-content-center">
                   <p  *ngIf="item.highValue"
-                    class="highvalue m-0">Atenção!
+                    class="highvalue m-0 btn-transition">Aviso!
                   </p>
                 </button>
               </td>
               <td>{{ item.rate }}</td>
               <td>
-                <mat-icon color="warn" class="delete" (click)="exibirDialogoExclusaoConversao(i)"
+                <mat-icon color="warn" class="delete btn-transition" (click)="exibirDialogoExclusaoConversao(i)"
                   title="Deletar conversão">delete</mat-icon>
               </td>
             </tr>
@@ -50,24 +50,23 @@
       <div class="ordenar text-dark fs-6">
         <span><strong>Hora: </strong> <mat-icon class="mat-icon-rtl-mirror" (click)="OrdenarHistorico('TimeAsc')"
             [ngStyle]="{'color': filtroOrdenacao === 'TimeAsc' ? 'black' : 'white'}"
-            title="Ordem crescente">arrow_upward</mat-icon>
+            title="Ordem crescente">arrow_circle_up</mat-icon>
           <mat-icon class="mat-icon-rtl-mirror" (click)="OrdenarHistorico('TimeDesc')"
             [ngStyle]="{'color': filtroOrdenacao === 'TimeDesc' ? 'black' : 'white'}"
-            title="Ordem decrescente">arrow_downward</mat-icon>
+            title="Ordem decrescente">arrow_circle_down</mat-icon>
         </span>
         <span><strong>Resultado: </strong> <mat-icon class="mat-icon-rtl-mirror" (click)="OrdenarHistorico('OutputAsc')"
             [ngStyle]="{'color': filtroOrdenacao === 'OutputAsc' ? 'black' : 'white'}"
-            title="Ordem crescente">arrow_upward</mat-icon>
+            title="Ordem crescente">arrow_circle_up</mat-icon>
           <mat-icon class="mat-icon-rtl-mirror" (click)="OrdenarHistorico('OutputDesc')"
             [ngStyle]="{'color': filtroOrdenacao === 'OutputDesc' ? 'black' : 'white'}"
-            title="Ordem decrescente">arrow_downward</mat-icon>
+            title="Ordem decrescente">arrow_circle_down</mat-icon>
         </span>
       </div>
     </div>
 
     <div class="text-center mt-4" *ngIf="history.length > 1">
-      <button class="btn btn-danger" (click)="exibirDialogoExclusaoTodo()" title="Deletar histórico">Limpar
-        tudo</button>
+      <button class="btn btn-transition btn-outline-danger" (click)="exibirDialogoExclusaoTodo()" title="Deletar histórico">Excluir Tudo</button>
     </div>
 
     <div class="d-flex justify-content-center fixed-bottom" *ngIf="historyDelete === true">

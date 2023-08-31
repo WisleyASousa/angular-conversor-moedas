@@ -28,21 +28,21 @@
   <table class="table mt-4 table-rounded shadow" *ngIf="!loading && coinList.length !== 0">
     <thead>
       <tr>
-        <th class="text-center thread-color fw-semibold text-dark">Símbolo
+        <th class="text-center thread-color fw-semibold fs-6 text-dark">Símbolo
           <mat-icon [ngStyle]="{'color': filtroOrdenacao === 'symbolAsc' ? 'black' : 'white'}"
             (click)="ordenarPor('symbolAsc')" class="mat-icon-rtl-mirror"
-            title="Ordem crescente">arrow_upward</mat-icon>
+            title="Ordem crescente">arrow_circle_up</mat-icon>
           <mat-icon [ngStyle]="{'color': filtroOrdenacao === 'symbolDesc' ? 'black' : 'white'}"
             (click)="ordenarPor('symbolDesc')" class="mat-icon-rtl-mirror"
-            title="Ordem decrescente">arrow_downward</mat-icon>
+            title="Ordem decrescente">arrow_circle_down</mat-icon>
         </th>
-        <th class="thread-color">Descrição
+        <th class="thread-color fs-6">Descrição
           <mat-icon [ngStyle]="{'color': filtroOrdenacao === 'descriptionAsc' ? 'black' : 'white'}"
             (click)="ordenarPor('descriptionAsc')" class="mat-icon-rtl-mirror"
-            title="Ordem crescente">arrow_upward</mat-icon>
+            title="Ordem crescente">arrow_circle_up</mat-icon>
           <mat-icon [ngStyle]="{'color': filtroOrdenacao === 'descriptionDesc' ? 'black' : 'white'}"
             (click)="ordenarPor('descriptionDesc')" class="mat-icon-rtl-mirror"
-            title="Ordem decrescente">arrow_downward</mat-icon>
+            title="Ordem decrescente">arrow_circle_down</mat-icon>
         </th>
       </tr>
     </thead>

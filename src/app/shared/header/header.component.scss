@@ -6,6 +6,7 @@
     margin: 0 16px;
   }
 
+
   .router-link-active {
     color: rgb(144, 201, 111);
   }
@@ -40,4 +41,8 @@
 
 .router-link-active {
   color: #90c96f;
+}
+.nav-link:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.1);
 }

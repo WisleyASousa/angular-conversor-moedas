@@ -66,6 +66,9 @@ app-container{
   .close {
     cursor: pointer;
     vertical-align: middle;
+    width: auto;
+    height: auto;
+    font-size: 2rem;
   }
 
   .check-circle {
@@ -104,4 +107,9 @@ app-container{
         opacity: 0;
     }
   }
+}
+
+.btn-transition:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.2);
 }

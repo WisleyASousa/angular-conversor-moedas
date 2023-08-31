@@ -13,15 +13,12 @@ import { HomeComponent } from './pages/home/home.component';
 
 import { MatIconModule } from '@angular/material/icon';
 
-import { CardComponent } from './shared/card/card.component';
-import { FormConversorComponent } from './shared/form-conversor/form-conversor.component';
+
 import { CurrencyConversionComponent } from './pages/currency-converter/currency-converter.component';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { NgxPaginationModule } from 'ngx-pagination';
-
-import { MessageComponent } from './shared/message/message.component';
 
 import { CommonModule } from '@angular/common';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -42,10 +39,8 @@ import { AlertComponent } from './shared/alert/alert.component';
     BannerComponent,
     ContainerComponent,
     HomeComponent,
-    CardComponent,
-    FormConversorComponent,
     CurrencyConversionComponent,
-    MessageComponent,
+
     CoinListComponent,
     HistoricComponent,
     AlertComponent
