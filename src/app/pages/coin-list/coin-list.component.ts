@@ -44,18 +44,17 @@ export class CoinListComponent implements OnInit {
     const valorBusca = this.busca.trim().toLowerCase();
 
     if (!valorBusca) {
-      this.coinList = this.coinListCompleta.slice(); // Restaurar a lista completa
-      this.totalMoedas = this.coinListCompleta.length; // Atualizar o total de moedas
-      // this.ordenarPor(this.filtroOrdenacao);
+      this.coinList = this.coinListCompleta.slice(); // para restaurar a lista completa
+      this.totalMoedas = this.coinListCompleta.length; //para atualizar o total de moedas
     } else {
       this.coinList = this.coinListCompleta.filter(coin =>
         this.verificarTexto(coin.code, valorBusca) ||
         this.verificarTexto(coin.description, valorBusca)
       );
-      this.totalMoedas = this.coinList.length; // Atualizar o total de moedas após a busca
+      this.totalMoedas = this.coinList.length; // para atualizar o total de moedas depois da busca
     }
 
-    // Verificar se a página atual está fora dos limites após a busca
+    // Verificando se a página atual está fora dos limites depois da busca
     if (this.paginaAtual > Math.ceil(this.totalMoedas / this.itensPorPagina)) {
       this.paginaAtual = Math.max(1, Math.ceil(this.totalMoedas / this.itensPorPagina));
     }
