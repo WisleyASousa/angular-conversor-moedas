@@ -47,7 +47,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr
+      <tr (mouseover)="indexHover = i"
+      [@hoverShow]="indexHover === i ? 'show' : 'default'"
         *ngFor="let coin of coinList | paginate: { itemsPerPage: itensPorPagina, currentPage: paginaAtual }; let i = index">
         <td class="text-center fixed-width">{{ coin.code }}</td>
         <td class="fixed-width">{{ coin.description }}</td>

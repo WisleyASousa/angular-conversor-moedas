@@ -1,13 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { Coin } from '../../shared/interfaces/coin-list';
 import { CoinListService } from '../../service/consulta-coin-list.service';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+
 @Component({
   selector: 'app-coin-list',
   templateUrl: './coin-list.component.html',
-  styleUrls: ['./coin-list.component.scss']
+  styleUrls: ['./coin-list.component.scss'],
+  animations: [trigger('hoverShow', [
+    state('default', style({ })),
+    state('show', style({
+      border: '2px solid black',
+      filter: 'brightness(0.9)'
+    })),
+    transition('default => hoverShow', [
+      animate('200ms ease-out', style({
+        transform: 'scale(1.2)'
+      })),
+
+      animate(200)
+
+    ])
+
+  ])]
 })
 export class CoinListComponent implements OnInit {
-  title = 'Listagem de Moedas';
   coinList: Coin[] = [];
   coinListCompleta: Coin[] = [];
   totalMoedas: number = 0;
@@ -17,7 +34,8 @@ export class CoinListComponent implements OnInit {
   campoOrdenacao: string = 'code';
   filtroOrdenacao: string = 'symbolAsc'
   loading = true;
-
+  indexHover: number = -1;
+  
   constructor(private coinService: CoinListService) { }
 
   ngOnInit(): void {
