@@ -1,3 +1,4 @@
+
 .app-header {
   img {
    margin-right: 8px;
@@ -45,4 +46,8 @@
 .nav-link:hover {
   transition: all 0.5s ease;
   transform: scale(1.1);
+}
+.nav-link {
+  animation: bounce;
+  animation-duration: 2s;
 }
