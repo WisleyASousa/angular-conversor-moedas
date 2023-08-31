@@ -58,8 +58,7 @@ import { AlertComponent } from './shared/alert/alert.component';
     MatSelectModule,
     MatInputModule,
     MatDialogModule,
-    CurrencyMaskModule
-
+    CurrencyMaskModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

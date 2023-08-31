@@ -2,11 +2,28 @@ import { Component } from '@angular/core';
 import HistoryInterface from '../../shared/interfaces/coin-history';
 import { MatDialog } from '@angular/material/dialog';
 import { AlertComponent } from '../../shared/alert/alert.component';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-historic',
   templateUrl: './historic.component.html',
-  styleUrls: ['./historic.component.scss']
+  styleUrls: ['./historic.component.scss'],
+  animations: [trigger('hoverShow', [
+    state('default', style({ })),
+    state('show', style({
+      border: '2px solid black',
+      filter: 'brightness(0.9)'
+    })),
+    transition('default => hoverShow', [
+      animate('200ms ease-out', style({
+        transform: 'scale(1.2)'
+      })),
+
+      animate(200)
+
+    ])
+
+  ])]
 })
 
 export class HistoricComponent {
@@ -14,6 +31,8 @@ export class HistoricComponent {
   filtroOrdenacao: string = 'TimeAsc';
   historyDelete: boolean = false;
   conversionDelete: boolean = false;
+
+  indexHover: number = -1;
 
   constructor(private dialog: MatDialog) { }
 

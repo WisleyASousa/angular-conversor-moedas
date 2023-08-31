@@ -24,16 +24,22 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="text-center" *ngFor="let item of history; let i = index">
+            <tr
+              class="text-center"
+              @hoverShow
+              *ngFor="let item of history; let i = index"
+              (mouseover)="indexHover = i"
+              [@hoverShow]="indexHover === i ? 'show' : 'default'"
+            >
               <td>{{ item.date }}</td>
               <td>{{ item.time }}</td>
               <td>{{ item.input }}</td>
               <td>{{ item.originCurrency }}</td>
               <td>{{ item.destinyCurrency }}</td>
               <td>{{ item.output }}
-                <button type="button " title="Valor é superior que 10000 dólares" class="btn d-flex mx-auto align-items-center justify-content-center">
-                  <p  *ngIf="item.highValue"
-                    class="highvalue m-0 btn-transition">Aviso!
+                <button type="button " title="Valor é superior que 10000 dólares"
+                  class="btn d-flex mx-auto align-items-center justify-content-center">
+                  <p *ngIf="item.highValue" class="highvalue m-0 btn-transition">Aviso!
                   </p>
                 </button>
               </td>
@@ -66,7 +72,8 @@
     </div>
 
     <div class="text-center mt-4" *ngIf="history.length > 1">
-      <button class="btn btn-transition btn-outline-danger" (click)="exibirDialogoExclusaoTodo()" title="Deletar histórico">Excluir Tudo</button>
+      <button class="btn btn-transition btn-outline-danger" (click)="exibirDialogoExclusaoTodo()"
+        title="Deletar histórico">Excluir Tudo</button>
     </div>
 
     <div class="d-flex justify-content-center fixed-bottom" *ngIf="historyDelete === true">
